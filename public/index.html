@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div id="emails">
+                <div class="form-group">
+                    <label for="email1">Email:</label>
+                    <input type="email" id="email1" name="emails[]" required>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="addEmail()">Add Email</button>
+            </div>
+            <div id="phoneNumbers">
+                <div class="form-group">
+                    <label for="phone1">Phone Number:</label>
+                    <input type="tel" id="phone1" name="phoneNumbers[]" required>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="addPhoneNumber()">Add Phone Number</button>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src = "./index.js"></script>
+</body>
+</html>
